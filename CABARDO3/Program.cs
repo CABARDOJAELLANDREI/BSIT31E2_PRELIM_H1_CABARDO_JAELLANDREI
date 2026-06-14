@@ -152,3 +152,4 @@ class Program
         Console.WriteLine($"Highest Grade: {highestGrade}");
     }
 }
+
