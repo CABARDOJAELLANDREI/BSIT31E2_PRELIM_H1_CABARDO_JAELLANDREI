@@ -5,7 +5,7 @@ class Program
 {
     static List<string> studentNames = new List<string>();
     static List<List<int>> studentGrades = new List<List<int>>();
-    staic int studentCount = 0;
+    static int studentCount = 0;
 
     static void Main()
     {
@@ -19,7 +19,7 @@ class Program
             Console.WriteLine("3. Compute Class Average");
             Console.WriteLine("4. Find Highest Grade");
             Console.WriteLine("5. Exit");
-            Console.WriteLine("==========================")
+            Console.WriteLine("==========================");
             Console.Write("Choose option: ");
 
             string choice = Console.ReadLine();
@@ -28,19 +28,25 @@ class Program
             {
                 Add();
             }
-            else if (choice == "2");
+            else if (choice == "2")
             {
                 View();
             }
-             else if (choice == "3");
+            else if (choice == "3")
             {
                 Average();
             }
-             else if (choice == "4");
+            else if (choice == "4")
             {
                 Find();
             }
-             else if (choice == "5");
+            else if (choice == "5")
+            {
+                Console.WriteLine("\nExiting Program...");
+                Console.WriteLine("Goodbye!");
+                running = false;
+            }
+            else
             {
                 Console.WriteLine("Invalid option. ");
             }
@@ -50,18 +56,18 @@ class Program
     static void Add()
     {
         Console.WriteLine("\nEnter Student name: ");
-        string name  = Console.ReadLine();
+        string name = Console.ReadLine();
 
         List<int> grades = new List<int>();
 
         Console.Write("Enter grade 1: ");
-        grades.Add(Convert.ToInt32(Console.ReadLine());
+        grades.Add(Convert.ToInt32(Console.ReadLine()));
 
         Console.Write("Enter grade 2: ");
-        grades.Add(Convert.ToInt32(Console.ReadLine());
+        grades.Add(Convert.ToInt32(Console.ReadLine()));
 
         Console.Write("Enter grade 3: ");
-        grades.Add(Convert.ToInt32(Console.ReadLine());
+        grades.Add(Convert.ToInt32(Console.ReadLine()));
 
         studentNames.Add(name);
         studentGrades.Add(grades);
@@ -78,7 +84,7 @@ class Program
             Console.WriteLine("\nNo student records found.");
             return;
         }
-        
+
         Console.WriteLine("\n===== STUDENT SYSTEM =====");
 
         for (int i = 0; i < studentNames.Count; i++)
@@ -106,7 +112,7 @@ class Program
             return;
         }
 
-        double totalAverage == 0;
+        double totalAverage = 0;
 
         for (int i = 0; i < studentNames.Count; i++)
         {
@@ -148,10 +154,7 @@ class Program
 
         Console.WriteLine("\n===== HIGHEST GRADE =====");
         Console.WriteLine("\nTop Student: " + topStudent);
-        Console.WriteLine("\nHighest Grade: " + thighestGrade);
+        Console.WriteLine("\nHighest Grade: " + highestGrade);
 
     }
 }
-    
-
-
